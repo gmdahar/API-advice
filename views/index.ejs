@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset ="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Advice Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <% if (messages.error) { %>
+        <p style="color: red;"><%= messages.error %></p>
+      <% } %>
+<h1 id="h1-advice"><%= advice %></h1>
+
+    <div class="container">
+        <h1>Word-Based Advice Generator</h1>
+        <form action="/get-advice" method="POST">
+            <input type="text" id="name" name="query"  placeholder="Enter a word" autocomplete="name"  >
+            <button id="generate">Generate Advice</button>
+
+        </form>
+
+        <!-- <div id="advice"> <p><blockquote id="advice-quote"><%= advice %></blockquote></p> </div> -->
+
+    </div>
+
+    <!-- <div class="advice-card">
+
+       <p><blockquote id="advice-quote">Advice will be displayed here </blockquote></p> 
+
+      </div> -->
+
+</body>
+</html>
